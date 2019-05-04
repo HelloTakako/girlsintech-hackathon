@@ -1,0 +1,40 @@
+html{
+    font-size:62.5%;
+    height:100%;
+}
+body{
+    font-size:1.6rem;
+    line-height: 1.5;
+    width:100%;
+    height: 100%;
+    font-family:Arial, "Helvetica", sans-serif;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#38d4e2+0,29e54b+100 */
+    color: #333;
+    
+}
+#wrapper{
+    height:100%;
+    background: #38d4e2; /* Old browsers */
+    background: -moz-linear-gradient(top, #38d4e2 0%, #29e54b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #38d4e2 0%,#29e54b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #38d4e2 0%,#29e54b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38d4e2', endColorstr='#29e54b',GradientType=0 ); /* IE6-9 */
+}
+#logo{
+    margin:0 auto;
+}
+#logo img{
+    display:inline-block;
+    margin:0 auto;
+}
+button{
+    display: block;
+    padding:10px 20px;
+    font-size:2rem;
+    border:none;
+    border-radius:30px;
+    margin: 0 auto;
+    background-color:#fff;
+    font-weight:bold;
+    color:#888;
+}
