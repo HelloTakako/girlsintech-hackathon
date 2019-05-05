@@ -1,6 +1,7 @@
 # girlsintech-hackathon
 
 Q: What does it do?
+
 A: This web app encourages you to do a daily challenge to stop climate change.
 The UI has a map, and you will go along the route and earn points by doing daily challenges.
 There are 30 daily challenges at first.
