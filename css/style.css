@@ -25,14 +25,21 @@ a{
 }
 
 /* login.html */
+.character{
+    text-align: center;
+    padding:20px 0 0 0;
+}
 h1{
     color:#016E97;
     font-size: 3.6rem;
     text-align: center;
+    margin-bottom:30px;
 }
 h2{
     display:block;
     color:#9F4198;
+    font-size:2.5rem;
+    margin-bottom:5px;
 }
 .form{
     display: flex;
@@ -40,9 +47,11 @@ h2{
     flex-wrap: nowrap;
 }
 .form>*{
-    width:50%;
+    width:30%;
+    margin:0 auto;
+    text-align: center;
+    margin-bottom:10px;
 }
-
 .form input,.form button{
     width:100%;
 }
@@ -50,20 +59,26 @@ h2{
     background: #F5D45A;
     border:2px solid #016E97;
     color:#016E97;
-    padding:5px;
+    padding:10px;
     margin-bottom: 10px;   
     font-size:2rem;
 }
-
 .form button{
     display: block;
-    padding:10px 20px;
+    width:108%;
+    padding:10px;
     text-align: center;
     font-size:2rem;
     border:none;
     background-color:#016E97;
     font-weight:bold;
     color:#F5D45A;
+    margin-bottom:10px;
+}
+#forget_password{
+    font-size:2rem;
+    color: #161717;
+    text-decoration:underline;
 }
 
 /* map.html */
