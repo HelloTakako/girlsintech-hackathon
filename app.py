@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request, flash
 from helpers import database, forms
 from flask_login import current_user, login_user, logout_user, LoginManager
 import hashlib
+import json
 
 
 app = Flask(__name__)
@@ -64,6 +65,15 @@ def register():
         return render_template('map.html', form=form)
 
     return render_template('login.html', form=form)
+
+
+@app.route('/day/<int:day>')
+def challenges(day):
+    with open('data/challenges.json') as file:
+        challenges = json.load(file)
+    print(challenges[day])
+
+    return render_template('map.html',challenge = challenges[day])
 
 
 

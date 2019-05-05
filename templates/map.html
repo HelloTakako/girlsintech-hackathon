@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>30 Days for climate change</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+
 </head>
 
 <body>
+
+    <body>
     <div id="wrapper">
         <div id="wrapper_inner" class="map">
             <div class="map_overview">
@@ -48,17 +53,17 @@
                 </ul>
             </div>
             <div class="description">
-                <h3>Introduction</h3>
-                <p>description heredescription heredescription heredescription heredescription heredescription
-                    heredescription heredescription heredescription heredescription heredescription heredescription
-                    heredesc</p>
+                <h3>{{ challenge['Title'] }}</h3>
+                <p>{{ challenge['Content'] }}</p>
                 <form action="" method="post" enctype="multipart/form-data">
                     <label for="image">Image:</label>
-                    <input type="file" name="pic"><br />
-                    <input type="submit" name="upload" value="upload" />
+                    <input type="file" name="pic"><br/>
+                    <input type="submit" name="upload" value="upload"/>
+
             </div>
+
         </div>
     </div>
-</body>
+    </body>
 
 </html>
