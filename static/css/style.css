@@ -101,11 +101,11 @@ h2{
     position:absolute;
 }
 .description{
-    width: 27%;
+    width: 26%;
     position: absolute;
-    right: 0;
+    right: 16px;
     top: 155px;
-    color:#9F4198;
+    color: #9F4198;
 }
 .description p{
     font-size:1.8rem;
