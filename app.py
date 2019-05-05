@@ -12,8 +12,6 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
 
     if request.method == 'POST':
         user = None
@@ -28,7 +26,7 @@ def login():
             if user['password_hash'] == password:
                 user['is_logged'] = True
                 flash('You are now logged in', 'success')
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('map'))
 
             else:
                 user['is_logged'] = False
@@ -46,9 +44,9 @@ def login():
 def home():
     return render_template('index.html')
 
-@app.route('/dashboard')
-def dashboard():
-    return render_template('dashboard.html')
+@app.route('/map')
+def map():
+    return render_template('map.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -63,7 +61,7 @@ def register():
 
         user.create()
 
-        return render_template('dashboard.html', form=form)
+        return render_template('map.html', form=form)
 
     return render_template('login.html', form=form)
 
