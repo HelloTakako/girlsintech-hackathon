@@ -17,14 +17,16 @@
 
 <div id="wrapper">
     <div id="wrapper_inner" class="map">
+        <p class="map_bg"><img src="../static/images/map_bg.png" alt=""></p>
         <div class="map_overview">
+
             <ul id="challenges">
                 <li><a href="../day/1">Day<br>1</a></li>
                 <li><a href="../day/2">Day<br>2</a></li>
-                <li><a href="../day/3">Day<br>3</a></li>
-                <li><a href="../day/4">Day<br>4</a></li>
-                <li><a href="../day/5">Day<br>5</a></li>
-                <li><a href="../day/5">Day<br>6</a></li>
+                <!-- <li><a href="#">Day<br>3</a></li>
+                <li><a href="#">Day<br>4</a></li>
+                <li><a href="#">Day<br>5</a></li>
+                <li><a href="#">Day<br>6</a></li>
                 <li><a href="#">Day<br>7</a></li>
                 <li><a href="#">Day<br>8</a></li>
                 <li><a href="#">Day<br>9</a></li>
@@ -48,18 +50,16 @@
                 <li><a href="#">Day<br>27</a></li>
                 <li><a href="#">Day<br>28</a></li>
                 <li><a href="#">Day<br>29</a></li>
-                <li><a href="#">Day<br>30</a></li>
+                <li><a href="#">Day<br>30</a></li> -->
             </ul>
         </div>
-
         <div class="description">
-
             <h3>{{ challenge['Title'] }}</h3>
             <p>{{ challenge['Content'] }}</p>
             <form action="../uploads/{{ challenge['id'] }}" method="POST" enctype="multipart/form-data">
                 <label for="image">Image:</label>
                 {% if picture %}
-                    <img alt="picture of the day" src=".data/{{picture}}">
+                    <img alt="picture of the day" src=".data/{{ picture }}">
                 {% else %}
                     <p>Upload your daily image</p>
                 {% endif %}
@@ -71,5 +71,6 @@
     </div>
 </div>
 </body>
+
 
 </html>
