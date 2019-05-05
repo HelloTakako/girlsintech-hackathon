@@ -14,6 +14,7 @@ body{
 }
 #wrapper{
     height:100%;
+    width:1024px;
     background: #38d4e2; /* Old browsers */
     background: -moz-linear-gradient(top, #38d4e2 0%, #29e54b 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #38d4e2 0%,#29e54b 100%); /* Chrome10-25,Safari5.1-6 */
