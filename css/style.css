@@ -28,7 +28,7 @@ a{
     width:1024px;
     margin:0 auto;
 }
-#map{
+.map{
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
@@ -58,9 +58,13 @@ button{
     font-weight:bold;
     color:#888;
 }
+#challenges{
+    position:relative;
+}
 
 #challenges li{
     display:inline-block;
+    position:absolute;
 }
 #challenges li a{
     display:block;
