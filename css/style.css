@@ -64,7 +64,7 @@ button{
 
 #challenges li{
     display:inline-block;
-    position:absolute;
+    /* position:absolute; */
 }
 #challenges li a{
     display:block;
