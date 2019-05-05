@@ -20,7 +20,7 @@ a{
     background: #F5D45A;
 }
 #wrapper_inner{
-    width:1024px;
+    width:1200px;
     margin:0 auto;
 }
 
@@ -88,14 +88,42 @@ h2{
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
+    position:relative;
 }
+
 .map_overview{
     width:65%;
-    background: url("./images/map_overview.jpg") no-repeat;
+    position: relative;
+}
+
+.map_bg img{
+    width:100%;
+    position:absolute;
 }
 .description{
-    padding:3%;
-    width:25%;
+    width: 27%;
+    position: absolute;
+    right: 0;
+    top: 155px;
+    color:#9F4198;
+}
+.description p{
+    font-size:1.8rem;
+}
+h3{
+    font-size:2.6rem;
+    margin-bottom:30px;
+}
+input[type="submit"]{
+    background-color: #9F4198;
+    display: block;
+    width: 150px;
+    margin: 20px auto 0;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px;
 }
 #logo{
     margin:0 auto;
@@ -107,6 +135,33 @@ h2{
 
 #challenges{
     position:relative;
+}
+.desc_bg{
+    position:absolute;
+}
+#d1,#d2{
+    position: absolute;
+    font-size: 3rem;
+    height: 49px;
+    width: 53px;
+    text-align: center;
+    border-radius: 50%;
+    border: 4px solid #9F4098;
+    color: #9F4098;
+    background-color: #fff;
+    z-index: 999;
+    padding-top: 5px;
+}
+#d1 a,#d2 a{
+    color: #9F4098;
+}
+#d1{
+    top: 253px;
+    left: 27px;
+}
+#d2{
+    top: 338px;
+    left: 25px;
 }
 
 #challenges li{
