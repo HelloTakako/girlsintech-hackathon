@@ -1,13 +1,18 @@
-from flask import Flask, render_template, redirect, url_for, request, flash
+from flask import Flask, render_template, redirect, url_for, request, flash, send_from_directory
 from helpers import database, forms
-from flask_login import current_user, login_user, logout_user, LoginManager
+from werkzeug.utils import secure_filename
 import hashlib
 import json
+import os
 
 
 app = Flask(__name__)
 
+app.config['UPLOAD_FOLDER'] = './data'
+
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 
 
@@ -47,7 +52,10 @@ def home():
 
 @app.route('/map')
 def map():
-    return render_template('map.html')
+    return render_template('map.html',challenge =   {
+    "Title": "Introduction",
+    "Content": "Blablabla"
+  })
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -68,12 +76,56 @@ def register():
 
 
 @app.route('/day/<int:day>')
-def challenges(day):
+def challenges(day, picture = None):
     with open('data/challenges.json') as file:
         challenges = json.load(file)
-    print(challenges[day])
+    try:
+        challenge = challenges[day - 1]
 
-    return render_template('map.html',challenge = challenges[day])
+    except IndexError:
+        challenge = {
+    "Title": "Work in progress",
+    "Content": "No challenge defined for today"
+  }
+    return render_template('map.html',challenge = challenge, picture = picture)
+
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+
+@app.route('/uploads/<int:challenge_id>', methods=['GET','POST'])
+def upload_file(challenge_id):
+    if request.method == 'POST':
+        # check if the post request has the file part
+        print(request.files)
+        if 'file' not in request.files:
+            print('foo')
+            return redirect(request.url)
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            return redirect(request.url)
+
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('map',challenge = challenge_id,
+                                    picture=filename))
+
+
+
+
+
 
 
 

@@ -1,13 +1,16 @@
 [
   {
+    "id": 1,
     "Title": " First daily challenge",
     "Content": "Blablabla"
   },
   {
+    "id": 2,
     "Title": " Second daily challenge",
     "Content": "Blablabla"
   },
   {
+    "id": 3,
     "Title": " Third daily challenge",
     "Content": "Blablabla"
   }
