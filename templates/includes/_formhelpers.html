@@ -1,0 +1,12 @@
+
+{% macro render_field(field) %}
+    {% if field.flags.required %}{{ field.label(text='<span style="color:red">* </span>' + field.label.text) }}
+    {% else %}{{ field.label }}{% endif %}
+    {{ field(**kwargs)|safe }}
+    {% if field.errors %}
+        {% for error in field.errors %}
+            <span class="help-inline">{{ error }}</span>
+        {% endfor %}
+    {% endif %}
+
+{% endmacro %}

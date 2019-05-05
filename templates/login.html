@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+    <body>
+    <div id="wrapper">
+        <div id="wrapper_inner">
+            <p><img src="../img/logo.png" alt=""></p>
+            <h1>30 Days for Climate Change</h1>
+            <div class="form">
+
+                <form action="./login" method="POST" id="form_login">
+                    <h2>Login your account</h2>
+                    <input type="e-mail" name="email" placeholder="Enter Email" ">
+                    <input type="password" name="password" placeholder="Enter password" >
+                    <button type="submit">Sign In</button>
+                    <a href="#" id="forget_password">Forget password</a>
+                </form>
+                <form action="./register" method="POST" id="form_login">
+                    <h2>Setup a new account</h2>
+                    <input type="username" name="username" placeholder="Choose an Username">
+                    <input type="e-mail" name="email" placeholder="Enter Email">
+                    <input type="password" name="password" placeholder="Set up password">
+                    <input type="password" name="confirm" placeholder="Re-enter password">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+    
+{% endblock %}

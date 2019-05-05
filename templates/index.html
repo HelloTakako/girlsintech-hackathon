@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Welcome to 30 days of code</h1>
+        <p class="lead"> This will be the homepage with all the blabla</p>
+        {% if current_user.is_anonymous %}
+            <a href="/register" class="btn btn-primary btn-lg">Register</a>
+            <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#loginModal">Login</button>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
