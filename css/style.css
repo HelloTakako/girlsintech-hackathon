@@ -33,6 +33,7 @@ h1{
 }
 h2{
     display:block;
+    color:#9F4198;
 }
 .form{
     display: flex;
@@ -42,9 +43,14 @@ h2{
 .form>*{
     width:50%;
 }
+
+.form input,.form button{
+    width:100%;
+}
 .form input{
     background: #F5D45A;
     border:2px solid #016E97;
+    color:#016E97;
     padding:5px;
     margin-bottom: 10px;   
     font-size:2rem;
