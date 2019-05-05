@@ -52,9 +52,10 @@ def home():
 
 @app.route('/map')
 def map():
+
     return render_template('map.html',challenge =   {
     "Title": "Introduction",
-    "Content": "Blablabla"
+    "Content": "Welcome to the 30 days of climate change challenge, you are now in the journey to save the earth. Every time you finish the challenge, the next challenge will open for you. You can use the diamond to skip the challenge if you cannot make it."
   })
 
 
@@ -75,7 +76,7 @@ def register():
     return render_template('login.html', form=form)
 
 
-@app.route('/day/<int:day>')
+@app.route('/day/<int:day>/<string:picture>')
 def challenges(day, picture = None):
     with open('data/challenges.json') as file:
         challenges = json.load(file)
@@ -119,8 +120,8 @@ def upload_file(challenge_id):
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('map',challenge = challenge_id,
-                                    picture=filename))
+
+            return redirect('day/{}/{}'.format(challenge_id,filename))
 
 
 

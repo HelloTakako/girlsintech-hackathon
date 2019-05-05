@@ -1,17 +1,31 @@
-[
-  {
-    "id": 1,
-    "Title": " First daily challenge",
-    "Content": "Blablabla"
-  },
-  {
-    "id": 2,
-    "Title": " Second daily challenge",
-    "Content": "Blablabla"
-  },
-  {
-    "id": 3,
-    "Title": " Third daily challenge",
-    "Content": "Blablabla"
-  }
-]
+[{
+  "id": 1,
+  "Title": "First daily challenge",
+  "Content": "Get to know climate change! Please to watch the video below: ",
+  "Media" : "<video width=\\\"100%\\\"controls>\n <source src=\\\"https://www.youtube.com/watch?v=S7jpMG5DS4Q\\\" type=\\\"video/mp4\\\">\nYour browser does not support the video tag.\n</video>"
+},
+{
+"id": 2,
+"Title": " Second daily challenge",
+"Content": "Using the water bottle or mug instead of one-time cup for decreasing waste, please to take a photo to finish the challenge."
+},
+{
+  "id": 3,
+"Title": " Third daily challenge",
+"Content": "Are you going to work? Attend the class? Do you know if you take transportation, walk, bike or car pooling, you can decrease the air pollution to stop the climate change. Let’s take a photo in your way and share this good new to friends."
+},
+{
+  "id": 4,
+"Title": " Fourth daily challenge",
+"Content": "Do you know one plastic bag takes 200 years to decompose？Human used 1.2 Trillion every year globally. Can you image this 1.2 Trillion garbage will stay 200 years in the earth? Let’s start to shop with your own bag and decrease the garbage."
+},
+{
+  "id": 5,
+"Title": " Fifth daily challenge",
+"Content": "If we decrease 1 degree temperature, we will save some energy.Let’s do it."
+},
+{
+  "id": 6,
+"Title": " Sixth daily challenge",
+"Content": "Plants can purify sewage, eliminate and attenuate noise, monitor pollution of sulfur dioxide, fluorine, chlorine and ammoni. Let’s grows some plants and also get some fresh air to improve environment"
+}]

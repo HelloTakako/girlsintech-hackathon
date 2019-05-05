@@ -21,8 +21,8 @@
         <div class="map_overview">
 
             <ul id="challenges">
-                <li><a href="../day/1">Day<br>1</a></li>
-                <li><a href="../day/2">Day<br>2</a></li>
+                <li id="d1"><a href="../day/1">1</a></li>
+                <li id="d2"><a href="../day/2">2</a></li>
                 <!-- <li><a href="#">Day<br>3</a></li>
                 <li><a href="#">Day<br>4</a></li>
                 <li><a href="#">Day<br>5</a></li>
@@ -56,15 +56,24 @@
         <div class="description">
             <h3>{{ challenge['Title'] }}</h3>
             <p>{{ challenge['Content'] }}</p>
+            {% if challenge['Media'] %}
+
+
+                <iframe src="https://www.youtube.com/watch?v=S7jpMG5DS4Q">
+                </iframe>
+            {% endif %}
+
             <form action="../uploads/{{ challenge['id'] }}" method="POST" enctype="multipart/form-data">
-                <label for="image">Image:</label>
                 {% if picture %}
                     <img alt="picture of the day" src=".data/{{ picture }}">
                 {% else %}
-                    <p>Upload your daily image</p>
+                    {% if challenge['id'] %}
+                        <p>Upload your daily image</p>
+                        <input type="file" name="file"><br/>
+                        <input type="submit" name="upload" value="Upload"/>
+                    {% endif %}
                 {% endif %}
-                <input type="file" name="file"><br/>
-                <input type="submit" name="upload" value="Upload"/>
+
             </form>
         </div>
 
